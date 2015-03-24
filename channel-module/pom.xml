@@ -21,6 +21,12 @@
             <version>${motech.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>domain-module</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <!-- OSGi IT -->
         <dependency>
             <groupId>org.motechproject</groupId>

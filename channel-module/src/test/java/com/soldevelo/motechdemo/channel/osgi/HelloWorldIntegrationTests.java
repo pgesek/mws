@@ -8,7 +8,6 @@ import org.junit.runners.Suite;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        HelloWorldServiceIT.class,
         HelloWorldWebIT.class
 })
 public class HelloWorldIntegrationTests {

@@ -1,11 +1,14 @@
 package com.soldevelo.motechdemo.channel.web;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import com.soldevelo.motechdemo.domain.service.VisitService;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import com.soldevelo.motechdemo.channel.service.HelloWorldService;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
  * Controller for HelloWorld message and bundle status.
@@ -14,7 +17,7 @@ import com.soldevelo.motechdemo.channel.service.HelloWorldService;
 public class HelloWorldController {
 
     @Autowired
-    private HelloWorldService helloWorldService;
+    private VisitService visitService;
 
     private static final String OK = "OK";
 
@@ -24,9 +27,9 @@ public class HelloWorldController {
         return OK;
     }
 
-    @RequestMapping("/sayHello")
-    @ResponseBody
-    public String sayHello() {
-        return String.format("{\"message\":\"%s\"}", helloWorldService.sayHello());
+    @RequestMapping(value = "/visit/{patientId}", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    public void sayHello(@PathVariable String patientId) {
+        visitService.createVisit(patientId);
     }
 }
