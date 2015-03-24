@@ -111,6 +111,12 @@
             <artifactId>commons-codec</artifactId>
             <version>1.7</version>
         </dependency>
+        <!-- MOTECH modules -->
+        <dependency>
+            <groupId>org.motechproject</groupId>
+            <artifactId>event-logging</artifactId>
+            <version>${motech.version}</version>
+        </dependency>
     </dependencies>
 
     <repositories>

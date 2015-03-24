@@ -14,4 +14,13 @@
     <osgi:reference id="helloWorldRecordsDataService"
                     interface="com.soldevelo.motechdemo.domain.repository.HelloWorldRecordsDataService" />
 
+    <osgi:reference id="eventLoggingServiceManager"
+                    interface="org.motechproject.eventlogging.service.EventLoggingServiceManager" />
+
+    <osgi:reference id="eventQueryService"
+                    interface="org.motechproject.eventlogging.service.EventQueryService" />
+
+    <osgi:reference id="eventRelay"
+                    interface="org.motechproject.event.listener.EventRelay" />
+
 </beans>
