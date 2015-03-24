@@ -151,7 +151,12 @@
                         <Export-Package>com.soldevelo.motechdemo.domain.service;version=${project.version},
                             com.soldevelo.motechdemo.domain.repository;version=${project.version},
                             com.soldevelo.motechdemo.domain.domain;version=${project.version},</Export-Package>
-                        <Import-Package>*</Import-Package>
+                        <Import-Package>
+                            org.aopalliance.aop,
+                            org.springframework.aop,
+                            org.springframework.aop.framework,
+                            *
+                        </Import-Package>
                     </instructions>
                 </configuration>
             </plugin>

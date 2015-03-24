@@ -1,0 +1,7 @@
+[
+  {
+    "roleName":"Example Role",
+    "permissionNames": ["visit-admin"],
+    "deletable": false
+  }
+]

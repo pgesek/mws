@@ -1,0 +1,17 @@
+[
+  {
+    "pattern": "/**/channel-module/**",
+    "supportedSchemes": [
+      "NO_SECURITY"
+    ],
+    "protocol": "HTTP",
+    "priority": 1,
+    "rest": false,
+    "origin": "Example",
+    "version": "0.1",
+    "methodsRequired": [
+      "ANY"
+    ],
+    "active": true
+  }
+]
