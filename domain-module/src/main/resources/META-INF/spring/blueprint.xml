@@ -11,19 +11,33 @@
     <osgi:service ref="helloWorldRecordService"
         interface="com.soldevelo.motechdemo.domain.service.HelloWorldRecordService" />
 
+    <!-- Data services -->
     <osgi:reference id="helloWorldRecordsDataService"
                     interface="com.soldevelo.motechdemo.domain.repository.HelloWorldRecordsDataService" />
 
+    <osgi:reference id="patientDataService"
+                    interface="com.soldevelo.motechdemo.domain.repository.PatientDataService" />
+
+    <!-- Event logging -->
     <osgi:reference id="eventLoggingServiceManager"
                     interface="org.motechproject.eventlogging.service.EventLoggingServiceManager" />
 
     <osgi:reference id="eventQueryService"
                     interface="org.motechproject.eventlogging.service.EventQueryService" />
 
+    <!-- Events -->
     <osgi:reference id="eventRelay"
                     interface="org.motechproject.event.listener.EventRelay" />
 
+    <!-- Admin -->
     <osgi:reference id="statusMessageService"
                     interface="org.motechproject.admin.service.StatusMessageService" />
+
+    <!-- MDS -->
+    <osgi:reference id="entityService"
+                    interface="org.motechproject.mds.service.EntityService" />
+
+    <osgi:reference id="historyService"
+                    interface="org.motechproject.mds.service.HistoryService" />
 
 </beans>

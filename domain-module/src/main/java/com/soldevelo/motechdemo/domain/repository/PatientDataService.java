@@ -13,8 +13,11 @@ import java.util.Set;
 public interface PatientDataService extends MotechDataService<Patient> {
 
     @Lookup
+    Patient getByPatientId(@LookupField(name = "patientId") String patientId);
+
+    @Lookup
     List<Patient> getByBirthDate(@LookupField(name = "birthdate") Range<DateTime> birthdate);
 
     @Lookup
-    Patient getByBirthplace(@LookupField(name = "name") Set<String> name);
+    List<Patient> getByBirthplace(@LookupField(name = "birthplace") Set<String> birthplace);
 }
