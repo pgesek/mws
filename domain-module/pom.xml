@@ -117,6 +117,11 @@
             <artifactId>event-logging</artifactId>
             <version>${motech.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.motechproject</groupId>
+            <artifactId>motech-admin</artifactId>
+            <version>${motech.version}</version>
+        </dependency>
     </dependencies>
 
     <repositories>

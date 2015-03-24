@@ -23,4 +23,7 @@
     <osgi:reference id="eventRelay"
                     interface="org.motechproject.event.listener.EventRelay" />
 
+    <osgi:reference id="statusMessageService"
+                    interface="org.motechproject.admin.service.StatusMessageService" />
+
 </beans>
