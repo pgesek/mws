@@ -65,7 +65,7 @@ public class VisitServiceImpl implements VisitService {
     }
 
     @Override
-    public List<Visit> getVisitAudit(String patientId) {
+    public List getVisitAudit(String patientId) {
         Patient patient = patientDataService.getByPatientId(patientId);
         return historyService.getHistoryForInstance(patient, null);
     }

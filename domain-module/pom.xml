@@ -153,6 +153,7 @@
                     <instructions>
                         <Blueprint-Enabled>true</Blueprint-Enabled>
                         <Resource-Path>domain-module/resources</Resource-Path>
+                        <Context-Path>demo</Context-Path>
                         <Export-Package>com.soldevelo.motechdemo.domain.service;version=${project.version},
                             com.soldevelo.motechdemo.domain.repository;version=${project.version},
                             com.soldevelo.motechdemo.domain.domain;version=${project.version},</Export-Package>
