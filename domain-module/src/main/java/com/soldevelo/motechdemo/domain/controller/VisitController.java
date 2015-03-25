@@ -1,6 +1,7 @@
 package com.soldevelo.motechdemo.domain.controller;
 
 import com.soldevelo.motechdemo.domain.domain.VisitStatus;
+import com.soldevelo.motechdemo.domain.events.PillReminderComponent;
 import com.soldevelo.motechdemo.domain.service.VisitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,6 +21,9 @@ public class VisitController {
     @Autowired
     private VisitService visitService;
 
+    @Autowired
+    private PillReminderComponent pillReminderComponent;
+
     @RequestMapping(value = "/add/{patientId}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public void addVisit(@PathVariable("patientId") String patientId) {
@@ -36,6 +40,12 @@ public class VisitController {
     @ResponseBody
     public List audit(@PathVariable("patientId") String patientId) {
         return visitService.getVisitAudit(patientId);
+    }
+
+    @RequestMapping(value = "/pillreminder/{patientId}/{hour}/{minutes}", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public void setUpReminder(@PathVariable("patientId") String patientId, @PathVariable("hour") int hour, @PathVariable("minutes") int minute) {
+        pillReminderComponent.postReminder(patientId, hour, minute);
     }
 
 }

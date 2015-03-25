@@ -29,9 +29,16 @@
     <osgi:reference id="eventRelay"
                     interface="org.motechproject.event.listener.EventRelay" />
 
+    <osgi:reference id="eventListenerRegistryServiceOsgi"
+                    interface="org.motechproject.event.listener.EventListenerRegistryService"/>
+
     <!-- Admin -->
     <osgi:reference id="statusMessageService"
                     interface="org.motechproject.admin.service.StatusMessageService" />
+
+    <!-- Pill reminder -->
+    <osgi:reference id="pillReminderService"
+                    interface="org.motechproject.pillreminder.service.PillReminderService" />
 
     <!-- MDS -->
     <osgi:reference id="entityService"

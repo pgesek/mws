@@ -122,6 +122,11 @@
             <artifactId>motech-admin</artifactId>
             <version>${motech.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.motechproject</groupId>
+            <artifactId>pill-reminder</artifactId>
+            <version>${motech.version}</version>
+        </dependency>
     </dependencies>
 
     <repositories>
