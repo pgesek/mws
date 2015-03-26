@@ -1,0 +1,36 @@
+{
+    "displayName": "Demo",
+    "triggerTaskEvents" : [
+        {
+          "displayName" : "Patient Created",
+          "subject" : "com.soldevelo.demo.patientCreated",
+          "eventParameters" : [
+            {
+              "eventKey" : "patientId",
+              "displayName" : "Patient ID"
+            },
+            {
+              "eventKey" : "patientName",
+              "displayName" : "Patient Name"
+            }
+          ]
+        }
+    ],
+    "actionTaskEvents": [
+        {
+            "displayName": "Create Appointment",
+            "subject": "com.soldevelo.demo.createAppointment",
+            "actionParameters": [
+                {
+                    "key": "appointment.location",
+                    "displayName": "Location"
+                },
+                {
+                    "key": "appointment.date",
+                    "displayName": "Appointment time",
+                    "type": "DATE"
+                }
+            ]
+        }
+    ]
+}
